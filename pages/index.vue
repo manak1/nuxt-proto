@@ -3,21 +3,19 @@
     <div>
       <full-page id="fullpage" ref="fullpage" :options="options">
         <div class="section">
-          <h2>section1</h2>
-          <button class="next" @click="$refs.fullpage.api.moveSectionDown()">
-            Next
-          </button>
-          <div v-parallax="0.2">
-            <kinesis-container>
-              <kinesis-element :strength="10" type="depth">
-                <img
-                  src="@/assets/image/logo.png"
-                  style="width:500px; height:auto; margin-left:40%;"
-                  alt=""
-                />
-              </kinesis-element>
-            </kinesis-container>
-          </div>
+          <kinesis-container>
+            <h2>section1</h2>
+            <button class="next" @click="$refs.fullpage.api.moveSectionDown()">
+              Next
+            </button>
+            <kinesis-element :strength="20" type="depth">
+              <img
+                src="@/assets/image/logo.svg"
+                style="width:500px; height:auto; margin-left:40%;"
+                alt=""
+              />
+            </kinesis-element>
+          </kinesis-container>
         </div>
         <div class="section">
           <h2>section2</h2>
@@ -40,7 +38,6 @@ export default {
         licenseKey: 'YOUR_KEY_HERE',
         menu: '#menu',
         anchors: ['page1', 'page2', 'page3'],
-        sectionsColor: ['#41b883', '#ff5f45', '#0798ec'],
         easingcss3: 'cubic-bezier(0.25, 0, 0, 0.24)',
         afterLoad: this.afterLoad,
         animateAnchor: true,

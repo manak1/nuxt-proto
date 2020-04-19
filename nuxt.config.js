@@ -31,7 +31,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~assets/scss/common.scss'],
+  css: ['~assets/scss/common.scss', 'animate.css/animate.min.css'],
   styleResources: {
     scss: './assets/scss/mixins.scss'
   },
@@ -51,7 +51,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['nuxt-fullpage.js'],
+  modules: ['@nuxtjs/style-resources', 'nuxt-fullpage.js'],
   /*
    ** Build configuration
    */

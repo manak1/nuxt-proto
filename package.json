@@ -15,7 +15,7 @@
     "lintfix:js": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "lint-staged": {
-      "*.{vue,js}": "npm run lintfix:js --"
+    "*.{vue,js}": "npm run lintfix:js --"
   },
   "husky": {
     "hooks": {
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
+    "animate.css": "^3.7.2",
     "fibers": "^4.0.2",
     "nuxt": "^2.0.0",
     "nuxt-fullpage.js": "0.0.3",
