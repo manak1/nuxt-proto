@@ -1,3 +1,5 @@
+const Sass = require('sass')
+const Fiber = require('fibers')
 export default {
   mode: 'universal',
   /*
@@ -14,7 +16,13 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.typekit.net/rsb4hii.css'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -23,7 +31,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~assets/scss/common.scss'],
+  styleResources: {
+    scss: './assets/scss/mixins.scss'
+  },
   /*
    ** Plugins to load before mounting the App
    */
@@ -45,9 +56,13 @@ export default {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber
+        }
+      }
+    }
   }
 }
