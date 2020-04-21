@@ -1,6 +1,9 @@
 # fullpage_nuxt
 
-> My gnarly Nuxt.js project
+kuon yagiさんのサイトを再現したひ
+
+デプロイ
+https://optimistic-pare-8d25c4.netlify.app/
 
 ## Build Setup
 
