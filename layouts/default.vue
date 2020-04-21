@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg"></div>
+    <div v-if="loaded" class="bg"></div>
     <l-header />
     <nuxt />
   </div>
@@ -10,6 +10,14 @@ import LHeader from '@/components/layout/LHeader'
 export default {
   components: {
     LHeader
+  },
+  data() {
+    return {
+      loaded: false
+    }
+  },
+  mounted() {
+    this.loaded = true
   }
 }
 </script>
@@ -17,7 +25,7 @@ export default {
 <style>
 .bg {
   position: absolute;
-  background-color: red;
+  background-color: #020b16;
   height: 100vh;
   width: 100%;
   animation-name: inPage;

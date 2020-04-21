@@ -1,21 +1,9 @@
 <template>
   <no-ssr>
-    <div>
+    <div v-if="loaded">
       <full-page id="fullpage" ref="fullpage" :options="options">
         <div class="section">
-          <kinesis-container>
-            <h2>section1</h2>
-            <button class="next" @click="$refs.fullpage.api.moveSectionDown()">
-              Next
-            </button>
-            <kinesis-element :strength="20" type="depth">
-              <img
-                src="@/assets/image/logo.svg"
-                style="width:500px; height:auto; margin-left:40%;"
-                alt=""
-              />
-            </kinesis-element>
-          </kinesis-container>
+          <c-intro />
         </div>
         <div class="section">
           <h2>section2</h2>
@@ -26,11 +14,10 @@
 </template>
 
 <script>
-import { KinesisContainer, KinesisElement } from 'vue-kinesis'
+import CIntro from '@/pages/-cIntro.vue'
 export default {
   components: {
-    KinesisContainer,
-    KinesisElement
+    CIntro
   },
   data() {
     return {
@@ -42,18 +29,20 @@ export default {
         afterLoad: this.afterLoad,
         animateAnchor: true,
         navigation: true,
-        navigationPosition: 'left'
+        navigationPosition: 'left',
+        onLeave: this.onMove
       },
-      show: false
+      loaded: false
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.show = true
-    }, 500)
+    this.loaded = true
   },
   methods: {
-    afterLoad() {}
+    onMove(origin, destination, direction) {
+      console.log('leaving...', origin, destination, direction)
+      return false
+    }
   }
 }
 </script>

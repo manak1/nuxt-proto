@@ -19,3 +19,49 @@ h2 {
 h3 {
   @include text-h3;
 }
+
+
+#fp-nav ul li a span {
+  background-color: #fff;
+  width: 20px;
+  border-radius: 0;
+}
+
+
+.fp-slidesNav ul li:hover a span  {
+  background-color: #fff;
+  width: 20px;
+  border-radius: 0;
+  margin: 0;
+}
+
+
+
+
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+  border-radius: 0;
+  width: 20px;
+  margin: 0;
+  height: 4px;
+}
+
+#fp-nav ul li a.active span {
+  border-radius: 0;
+  width: 120px;
+  height: 4px;
+}
+
+
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+  width: 20px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+}
+
+
+#fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a span {
+  width: 120px;
+  height: 4px;
+  margin: 0;
+}
