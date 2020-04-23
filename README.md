@@ -1,6 +1,6 @@
 # fullpage_nuxt
 
-kuon yagiさんのサイトを再現したひ
+experiment recreating kuon.space website with Nuxt.js.
 
 デプロイ
 https://optimistic-pare-8d25c4.netlify.app/
