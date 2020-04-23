@@ -38,11 +38,6 @@ export default {
   mounted() {
     this.loaded = true
   },
-  methods: {
-    onMove(origin, destination, direction) {
-      console.log('leaving...', origin, destination, direction)
-      return false
-    }
-  }
+  methods: {}
 }
 </script>
